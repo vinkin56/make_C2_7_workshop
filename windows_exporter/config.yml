@@ -1,0 +1,4 @@
+collectors:
+  enabled: os,cpu,cs,logical_disk,memory,net,system
+log:
+  level: warn

@@ -1,0 +1,1 @@
+windows_exporter.exe --config.file=config.yml
