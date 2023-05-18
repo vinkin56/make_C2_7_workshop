@@ -1,0 +1,84 @@
+version: '3.2'
+services:
+    prometheus:
+        image: prom/prometheus:latest
+        container_name: prometheus
+        volumes:
+            - ./prometheus:/etc/prometheus/
+        command:
+            - --config.file=/etc/prometheus/prometheus.yml
+        ports:
+            - 127.0.0.1:9090:9090
+        restart: always
+
+    node-exporter:
+        image: prom/node-exporter
+        volumes:
+            - /proc:/host/proc:ro
+            - /sys:/host/sys:ro
+            - /:/rootfs:ro
+        hostname: monitoring
+        command:
+            - --path.procfs=/host/proc
+            - --path.sysfs=/host/sys
+            - --collector.filesystem.ignored-mount-points
+            - ^/(sys|proc|dev|host|etc|rootfs/var/lib/docker/containers|rootfs/var/lib/docker/overlay2|rootfs/run/docker/netns|rootfs/var/lib/docker/aufs)($$|/)
+        ports:
+            - 127.0.0.1:9100:9100
+        restart: always
+
+    grafana:
+        image: grafana/grafana
+        container_name: grafana
+        depends_on:
+            - prometheus
+        environment:
+          - GF_SECURITY_ADMIN_USER=${ADMIN_USER:-admin}
+          - GF_SECURITY_ADMIN_PASSWORD=${ADMIN_PASSWORD:-admin}
+          - GF_USERS_ALLOW_SIGN_UP=false
+        ports:
+            - 127.0.0.1:3000:3000
+        volumes:
+            - ./grafana:/var/lib/grafana
+            - ./grafana/provisioning/:/etc/grafana/provisioning/
+        user: "$UID:$GID"
+        restart: unless-stopped
+
+    blackbox:
+        image: prom/blackbox-exporter
+        container_name: blackbox
+        hostname: blackbox
+        ports:
+          - 127.0.0.1:9115:9115
+        restart: unless-stopped
+        command:
+          - "--config.file=/etc/blackbox/blackbox.yml"
+        volumes:
+          - ./blackbox:/etc/blackbox
+
+      
+    cadvisor:
+        image: google/cadvisor
+        container_name: cadvisor
+        hostname: cadvisor
+        volumes:
+          - /:/rootfs:ro
+          - /var/run:/var/run:rw
+          - /sys:/sys:ro
+          - /var/lib/docker/:/var/lib/docker:ro
+        ports:
+          - 127.0.0.1:8080:8080
+        restart: always
+
+    alertmanager:
+        image: prom/alertmanager:v0.24.0
+        container_name: alertmanager
+        hostname: alertmanager
+        ports:
+          - 127.0.0.1:9093:9093
+        volumes:
+          - ./alertmanager:/etc/alertmanager
+        command:
+          - '--config.file=/etc/alertmanager/config.yml'
+          - '--storage.path=/alertmanager'
+        restart: unless-stopped

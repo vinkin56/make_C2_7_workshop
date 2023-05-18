@@ -1,0 +1,60 @@
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+{
+  "manifestVersion": "2.0.0",
+  "signatureType": "grafana",
+  "signedByOrg": "grafana",
+  "signedByOrgName": "Grafana Labs",
+  "plugin": "grafana-worldmap-panel",
+  "version": "1.0.3",
+  "time": 1675799905821,
+  "keyId": "7e4d0c6a708866e7",
+  "files": {
+    "LICENSE": "b46400c1ab5630edeb4e43b240a027d203375ebe5a9efb7de88c604c5c5cace0",
+    "CHANGELOG.md": "bfdf42dbd8796136f3f6cee851f47e95814a7df67929e685d3ef627b7dce793f",
+    "images/worldmap-usa.png": "4a1b437f93e58391993c546a9f1263b447cd051da3044fa3ff9af18f7c6d7a03",
+    "images/influx-query.png": "3d360abd6e961091a0f35a0c6cfda2ce323e249a9a616cb7f70f40cadec49d2f",
+    "images/elasticsearch-query.png": "d6fa38d8d97630afc277382267e4e5b6eef9c221f60ebcc8b1b4e1478bb4949a",
+    "images/layers.png": "cb07b394e0e448cce75ecca76d5fbe8f1aee0c3f5333ca1520a3368c68c80dc4",
+    "images/marker-icon.png": "ff44ffda09f3bd1ed45918e7a7af933832e0aaa71fdcc63b81bf78977b4f086b",
+    "images/marker-icon-2x.png": "6b3997d367766d63858f95db5167d28b4c9c80e8a1db0afc0846ad2b0c5d5da6",
+    "images/jsonp-endpoint.png": "9ef127439e65371ea6d00824e46b43e5ba62f85c171551e96021a005939797d7",
+    "images/worldmap_logo.svg": "a4b0c2dfd94b48289d1e8f37b5eb324ecede9e88f6ef1027f9778f35064f936e",
+    "images/worldmap-geohash-query.png": "143b255384f2b2de28b340b8b53f4bc147677f68b8b1595e9ef8853ceb2a373b",
+    "images/graphite-consolidateby.png": "479a60efb178c6c3b0a22eddbb974b25555765e38f12b43d870d0c39853d79b1",
+    "images/json-endpoint.png": "111a1d4473d8e586498b5d3d1ea6ae4ca7bd935f3f31f47158e1ffadc47408de",
+    "images/worldmap-light-theme.png": "5632a67982b31d412a7b13420d7e3165d4fc577ee2c6d0f9327fd1a2f5d1cdb4",
+    "images/worldmap-timeseries-query.png": "ad7289db533b7d6345cb9d0e34081ce124a8a799c277a4cf6513dfbce3f23f79",
+    "images/worldmap-world.png": "0872053149ee496349d8049e40a58dea39b2a0ce81f174ab44962d7e8640ec23",
+    "images/countries-option.png": "29b04d97b2d426605828206a8fae7eda349d59ee9c372669036db66cee009e2e",
+    "images/es-options.png": "8c6514bd386089dfdbafda0d35e7fb98bdad1cc4d65bb18d9057e83b4f39bb35",
+    "images/marker-shadow.png": "8f6b92aef1ea7fbd843150ca25a18c967977108b0ec58df98dbd3cae4286aad7",
+    "images/graphite-maxdatapoints.png": "7087c30c4c432ffa706f48d03e6acf513c7d12783bad2ab2942b22b1c5a3651c",
+    "images/layers-2x.png": "1f50e0ee5409b512cce602dcd1a81e2a9386c561421c6c58b1527532b7e9c659",
+    "module.js.LICENSE.txt": "423921440f7f7435bb46e8c0dc3e88b6bba2346ec5c50d90689054ba93826e44",
+    "module.js.map": "a5ecdf058ee04914bc5515ed3a3867a051b294db617c8801a093d526fe420f8b",
+    "plugin.json": "6b60d35edd6bf4c3b5eed2463c69d0ceceff8a97ccb2635cea814b8f082cf0eb",
+    "libs/leaflet.js": "19163b5e01993736bd14d8b5cd5083181dc954350a8e2b542fc48f0c2b4744f4",
+    "README.md": "aac05eb9edeb15c5a515571b6f7083afa667abce9b9439363a1cb6a42badee7f",
+    "module.js": "1a3d8ad9e8ff29582a5febed6aae479ffcfaa482a4fbe75b7b6e602197718f3e",
+    "data/countries_3letter.json": "cd87072b672087dfe8ab304b649109e42bb2d28a68860385fabeb083299177da",
+    "data/states.json": "460de2fa8bc1b6cca6f76ab72b172f37a54ffa03a2dbc0e5da7d42336884a4d9",
+    "data/probes.json": "105af94868db132e430499a43db868a13148506306234f9b0ba514e7df5ee9a2",
+    "data/countries.json": "3cc16444bc2120d1800d24ab552c8d5f42ea0cd7a8699a915f979586f7c4cb50",
+    "partials/module.html": "3b9506b70ef254f5c617bd78957a05972939085ea8a06206eeb68deef1adbe7a",
+    "partials/editor.html": "11c8158ff507effcd85f637b01ebc378728155cbfb55f7069ec0dfe0c4e5df3b"
+  }
+}
+-----BEGIN PGP SIGNATURE-----
+Version: OpenPGP.js v4.10.10
+Comment: https://openpgpjs.org
+
+wrkEARMKAAYFAmPirWIAIQkQfk0ManCIZucWIQTzOyW2kQdOhGNlcPN+TQxq
+cIhm5xKoAgkBte7tyzEetQJcuZdesO4MaryaAdtz73pxTWzZLux4dUqdqR9l
+XjN2tNK9VAlDDo/6hDK5Bi6GB70KZVBOdr+CwvMCCQHdhEVoVRB+KsiTtuDg
+vgX4nj2nYg+lxJ8m/Px2CNrbZv9Sl7YATZMOBTDpVwPQS4WaCal2xOGk2KWm
+tQ6ukIc3ag==
+=9ExT
+-----END PGP SIGNATURE-----
